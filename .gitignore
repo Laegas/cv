@@ -1,5 +1,6 @@
-rendercv_output
-!Krystof_Spiller_CV.pdf
+# ignore outputs from unused CV folders
+rendercv/rendercv_output/*
+brilliant-cv/cv.pdf
 
 # Mac
 .DS_Store
