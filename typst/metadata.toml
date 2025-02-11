@@ -1,0 +1,22 @@
+[personal]
+    first_name = "Krystof"
+    last_name = "Spiller"
+
+    [personal.info]
+        github = "Laegas"
+        # homepage = 'krystofs.com'
+        email = "krystof.spiller@gmail.com"
+        linkedin = "krystof-spiller"
+        phone = "+45 91 86 94 01"
+
+[layout]
+    accent_color = "#e6805f"
+
+    [layout.fonts]
+        regular_font = "Source Sans 3"
+        header_font = "Roboto"
+
+[lang]
+    header_quote = "Senior Fullstack Software Engineer"
+    cv_footer = "Curriculum vitae"
+    letter_footer = "Cover letter"
