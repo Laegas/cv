@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "rendercv": "cd rendercv && rendercv render \"Krystof_Spiller_CV.yaml\"",
-    "brilliantcv": "cd brilliant-cv && typst c cv.typ"
+    "typst": "cd typst && typst watch cv.typ"
   }
 }

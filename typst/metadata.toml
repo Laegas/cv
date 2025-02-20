@@ -3,8 +3,8 @@
     last_name = "Spiller"
 
     [personal.info]
+        homepage = 'krystofs.com'
         github = "Laegas"
-        # homepage = 'krystofs.com'
         email = "krystof.spiller@gmail.com"
         linkedin = "krystof-spiller"
         phone = "+45 91 86 94 01"

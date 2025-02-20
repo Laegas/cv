@@ -86,7 +86,7 @@
 }
 
 #let headerQuoteStyle(str) = {
-  text(size: 10pt, weight: "medium", style: "italic", fill: accentColor, str)
+  text(size: 13pt, weight: "medium", fill: accentColor, str)
 }
 
 #let makeHeaderNameSection() = align(center, table(
