@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "typst": "cd typst && typst watch cv.typ"
+    "cv": "typst watch cv.typ",
+    "letter": "typst watch letter.typ",
+    "readme": "magick -density 300 cv.pdf assets/readme.png"
   }
 }

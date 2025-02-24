@@ -1,6 +1,4 @@
-# ignore outputs from unused CV folders
-rendercv/rendercv_output/*
-brilliant-cv/cv.pdf
+letter.pdf
 
 # Mac
 .DS_Store

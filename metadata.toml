@@ -1,6 +1,7 @@
 [personal]
     first_name = "Krystof"
     last_name = "Spiller"
+    location = "Copenhagen"
 
     [personal.info]
         homepage = 'krystofs.com'
@@ -20,3 +21,8 @@
     header_quote = "Senior Fullstack Software Engineer"
     cv_footer = "Curriculum vitae"
     letter_footer = "Cover letter"
+    
+[letter_variables]
+    letter_subject = "Job application for Senior Software Developer"
+    recipient_name = "Company"
+    recipient_address = "Company's address"
