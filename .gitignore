@@ -1,4 +1,7 @@
+# Cover letter inputs and outputs are not tracked
 letter.pdf
+letters
+metadata.local.toml
 
 # Mac
 .DS_Store

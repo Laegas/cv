@@ -262,7 +262,7 @@
   footer: cvFooter()
 )
 // Styling setup
-#set text(font: "Source Sans 3", weight: "regular", size: 9pt)
+#set text(font: regularFont, weight: "regular", size: 9pt)
 
 // Document content
 #makeHeaderNameSection()
@@ -276,11 +276,11 @@
   date: [2022 - Present],
   location: [Copenhagen, Denmark],
   description: list(
-    [Cross-functional collaboration during a billing revamp project including RevOps and Finance teams and integrating with Stripe and HubSpot. Experience with demoing to stakeholders, collaborating and negotiating solutions with designers and PMs. Technical discussions about features in my team and improvements in office hours. Self-improvement by receiving feedback from 1:1s and performance reviews.],
-    [Implemented publicly accessible calculator tool, added alternative currency exchange rates provider, wrote backend linter rules, an automated dead link checker, few data integrity checks and React hook for simpler and consistent modal implementations including forms.],
+    [Enabled a more efficient sales funnel by revamping billing in a cross-functional teamwork with RevOps and Finance teams integrating Stripe and HubSpot. Experience with demoing to stakeholders, product-oriented collaboration and negotiation of solutions with designers and PMs. Curious and open to learn and improve from my colleagues and critical feedback from 1:1s and performance reviews.],
+    [Delivered a time-critical feature without delays, implemented publicly accessible calculator tool, added alternative currency exchange rates provider, added an automated dead link checker and functionality for simpler and consistent modal implementations including forms.],
   ),
   interpersonalTags: ("Cross-functional teamwork", "Ideation sessions", "Technical discussions", "Stakeholder demos", "Office hours"),
-  techTags: ("HubSpot", "Stripe", "RuboCop"),
+  techTags: ("HubSpot", "Stripe"),
 )
 
 #cvEntry(
@@ -303,7 +303,7 @@
   date: [2019 - 2020],
   location: [Aarhus, Denmark],
   description: list(
-    [Healthcare division, daily and restrospective rituals, build systems (Grunt & Gradle) dependency management (Nexus, NuGet, npm & Maven)],
+    [Improved dependency management and build system for hospital task system app for nurses and orderlies. Attained Kanban experience.],
   ),
   interpersonalTags: ("Retrospectives", "Daily standup", "Kanban"),
   techTags: ("Powershell", "C#", ".NET Core", "TeamCity CI"),
@@ -318,7 +318,6 @@
   location: [Denmark],
   logo: image("img/dtu.png"),
   description: list(
-    // TODO link to thesis
     [_Thesis_: Aiding Informed Critical Thinking: Mining and Visualizing the Evolution of Online Content],
     [_AI and algorithms study line_: Data structures #hBar() Multi-agent systems #hBar() Deep learning #hBar() UX engineering #hBar() Computer vision],
   ),
@@ -331,7 +330,6 @@
   location: [Denmark],
   logo: image("img/via.png"),
   description: list(
-    // TODO: link to project
     [_Final project_: Cloud computing for end users #hBar() Electron #hBar() React #hBar() Docker],
     [_Data engineering specialization_: Database optimization #hBar() Data security and encryption #hBar() Data warehousing],
   ),

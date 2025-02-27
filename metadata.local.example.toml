@@ -1,0 +1,8 @@
+[letter_variables]
+    personal_location = "Copenhagen"
+    letter_subject = "Job application for Senior Software Developer"
+    recipient_name = "Company"
+    recipient_address = "Company's address"
+    recipient_logo = "logo.png"
+    content = '''
+'''
