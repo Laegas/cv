@@ -4,9 +4,9 @@
 
     [personal.info]
         homepage = 'krystofs.com'
-        github = "Laegas"
-        email = "krystof.spiller@gmail.com"
         linkedin = "krystof-spiller"
+        github = "krystofspiller"
+        email = "krystof.spiller@gmail.com"
         phone = "+45 91 86 94 01"
 
 [layout]
@@ -17,6 +17,6 @@
         header_font = "Roboto"
 
 [lang]
-    header_quote = "Senior Fullstack Software Engineer"
+    header_quote = "Senior Software Engineer | Engineering customer-centric solutions"
     cv_footer = "Curriculum vitae"
     letter_footer = "Cover letter"

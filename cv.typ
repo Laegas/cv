@@ -35,11 +35,11 @@
 #let makeHeaderInfo() = {
   let iconsArgs = (size: 13pt)
   let personalInfoIcons = (
-    phone: fa-phone(..iconsArgs),
+    phone: fa-mobile-screen-button(..iconsArgs),
     email: fa-envelope(..iconsArgs),
     linkedin: fa-linkedin(..iconsArgs),
-    homepage: fa-pager(..iconsArgs),
-    github: fa-square-github(..iconsArgs),
+    homepage: fa-link(..iconsArgs),
+    github: fa-github(..iconsArgs),
   )
   let n = 1
   for (k, v) in personalInfo { 
@@ -90,13 +90,13 @@
 }
 
 #let makeHeaderNameSection() = align(center, table(
-  columns: 1fr,
-  inset: 0pt,
-  stroke: none,
-  row-gutter: (6mm, 4mm),
-  [#headerNameStyle(firstName) #h(5pt) #headerNameStyle(lastName)],
-  [#headerInfoStyle(makeHeaderInfo())],
-  [#headerQuoteStyle(headerQuote)],
+    columns: 1fr,
+    inset: 0pt,
+    stroke: none,
+    row-gutter: (6mm, 4mm),
+    [#headerNameStyle(firstName) #h(5pt) #headerNameStyle(lastName)],
+    [#headerInfoStyle(makeHeaderInfo())],
+    [#headerQuoteStyle(headerQuote)],
 ))
 
 /// Add the title of a section.
