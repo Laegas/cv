@@ -7,16 +7,16 @@
         linkedin = "krystof-spiller"
         github = "krystofspiller"
         email = "krystof.spiller@gmail.com"
-        phone = "+45 91 86 94 01"
+        location = "Copenhagen"
 
 [layout]
-    accent_color = "#e6805f"
+    accent_color = "#c25700"
 
     [layout.fonts]
         regular_font = "Source Sans 3"
         header_font = "Roboto"
 
 [lang]
-    header_quote = "Senior Software Engineer | Engineering customer-centric solutions"
+    header_quote = "Senior Software Engineer | Delivering customer-centric solutions"
     cv_footer = "Curriculum vitae"
     letter_footer = "Cover letter"

@@ -40,6 +40,7 @@
     linkedin: fa-linkedin(..iconsArgs),
     homepage: fa-link(..iconsArgs),
     github: fa-github(..iconsArgs),
+    location: fa-location-dot(..iconsArgs),
   )
   let n = 1
   for (k, v) in personalInfo { 
@@ -66,7 +67,7 @@
     }
     // Adds hBar
     if n != personalInfo.len() {
-      [#h(5pt) #box(height: 15pt, baseline: 25%, line(stroke: 0.9pt + accentColor, angle: 90deg, length: 100%)) #h(5pt)]
+      [#h(5pt) #box(height: 15pt, baseline: 25%, line(stroke: 0.9pt, angle: 90deg, length: 100%)) #h(5pt)]
     }
     n = n + 1
   }
@@ -75,28 +76,28 @@
 #let headerNameStyle(str) = {
   text(
     font: headerFont,
-    size: 32pt,
+    size: 30pt,
     weight: "regular",
     str,
   )
 }
 
 #let headerInfoStyle(str) = {
-  text(size: 10pt, fill: accentColor, str)
+  text(size: 10pt, weight: 600, str)
 }
 
 #let headerQuoteStyle(str) = {
-  text(size: 13pt, weight: "medium", fill: accentColor, str)
+  text(size: 14pt, weight: 600, str)
 }
 
 #let makeHeaderNameSection() = align(center, table(
     columns: 1fr,
     inset: 0pt,
     stroke: none,
-    row-gutter: (6mm, 4mm),
+    row-gutter: (5mm, 4mm),
     [#headerNameStyle(firstName) #h(5pt) #headerNameStyle(lastName)],
-    [#headerInfoStyle(makeHeaderInfo())],
     [#headerQuoteStyle(headerQuote)],
+    [#headerInfoStyle(makeHeaderInfo())],
 ))
 
 /// Add the title of a section.
@@ -113,7 +114,7 @@
   let highlightText = title.slice(0, letters)
   let normalText = title.slice(letters)
   let sectionTitleStyle(str, color: black) = {
-    text(size: 16pt, weight: "bold", fill: color, str)
+    text(size: 14pt, weight: "bold", fill: color, str)
   }
 
   v(beforeSectionSkip)
@@ -224,9 +225,10 @@
       ..content
     ),
   )
-  
+  v(-1pt)
   if (description != none) {
     text(description)
+    v(0pt)
   }
   entryTagListStyle(interpersonalTags, interpersonal: true)
   entryTagListStyle(techTags)
@@ -255,7 +257,7 @@
 // Page setup
 #set page(
   paper: "a4",
-  margin: (x: 30pt, y: 40pt),
+  margin: (x: 30pt, y: 36pt),
   background: place(top+left, rect(height: 100%, width: 100%, fill: gradient.linear(..color.map.flare, angle: 60deg))[
     #place(top+left, dx: 15pt, dy: 15pt, rect(height: 100%-30pt, width: 100%-30pt, fill: white, radius: 10pt))
   ]),
@@ -275,24 +277,19 @@
   logo: image("img/carta.svg"),
   date: [2022 - Present],
   location: [Copenhagen, Denmark],
-  description: list(
-    [Enabled a more efficient sales funnel by revamping billing in a cross-functional teamwork with RevOps and Finance teams integrating Stripe and HubSpot. Experience with demoing to stakeholders, product-oriented collaboration and negotiation of solutions with designers and PMs. Curious and open to learn and improve from my colleagues and critical feedback from 1:1s and performance reviews.],
-    [Delivered a time-critical feature without delays, implemented publicly accessible calculator tool, added alternative currency exchange rates provider, added an automated dead link checker and functionality for simpler and consistent modal implementations including forms.],
-  ),
+  description: "I enabled a more efficient sales funnel and transparent management of billing for customers by revamping billing in a cross-functional teamwork, increased product demand by creating a tool for fundraising founders, delivered a high-impact feature despite hard deadline, provided affordable currency exchange rate solution for 200+ currencies, enhanced UX and DX of modal component and improved product reliability by automating link validation and adding data integrity checks. Presented upcoming features to both company-wide and small stakeholder groups, tailoring the presentation accordingly. Collaborated with and on solutions with designers and product managers.",
   interpersonalTags: ("Cross-functional teamwork", "Ideation sessions", "Technical discussions", "Stakeholder demos", "Office hours"),
   techTags: ("HubSpot", "Stripe"),
 )
 
 #cvEntry(
   title: [Junior Software Engineer],
-  society: [Capdesk],
+  society: [Capdesk (Acquired by Carta)],
   logo: image("img/capdesk.png"),
   date: [2020 - 2022],
   location: [Copenhagen, Denmark],
-  description: list(
-    [Onboarding buddy for an engineer and a designer. Regular knowledge sharing via pair programming. Outside of full-stack feature work, built Heroku ↔ Slack integration to announce releases, implemented a spellchecker in GitHub Actions using LanguageTool, added OpenAPI, wrote an ESLint rule and Git hooks for improved workflow. Went through acquisition by Carta.],
-  ),
-  interpersonalTags: ("Mentoring colleagues", "Pair programming"),
+  description: "I coached a new engineer and a designer, saved time for an engineering lead by automating app release announcements in Slack, improved copy quality through automated grammar and spellchecking using LanguageTool via GitHub Actions and, by adding OpenAPI, laid the foundation for future improvements like automated TypeScript type generation. Spearheaded multiple improvements to internal processes. Demonstrated eagerness to learn and improve from my colleagues and critical feedback from 1:1s and performance reviews.",
+  interpersonalTags: ("Mentoring", "Knowledge sharing", "Pair programming"),
   techTags: ("Ruby on Rails", "React", "TypeScript", "PostgreSQL", "GitHub Actions", "Heroku", "Slack API"),
 )
 
@@ -302,11 +299,9 @@
   logo: image("img/systematic.png"),
   date: [2019 - 2020],
   location: [Aarhus, Denmark],
-  description: list(
-    [Improved dependency management and build system for hospital task system app for nurses and orderlies. Attained Kanban experience.],
-  ),
-  interpersonalTags: ("Retrospectives", "Daily standup", "Kanban"),
-  techTags: ("Powershell", "C#", ".NET Core", "TeamCity CI"),
+  description: "Accelerated developer velocity for hospital task system app for nurses and orderlies by streamlining dependency management and build system. Maintained high software quality by participating in acceptance testing.",
+  interpersonalTags: ("Acceptance testing", "Retrospectives", "Daily standup", "Kanban"),
+  techTags: ("Powershell", "C#", ".NET Core", "TeamCity", "Grunt"),
 )
 
 #cvSection("Education")
@@ -359,7 +354,7 @@
   title: [HabitVille],
   date: [2023 - Present],
   description: list(
-    [Hobby project for tracking habits and gamifying it in a tycoon-game. Started with a web app, now working on iOS mobile app.],
+    [Hobby project for tracking habits and gamifying it in a tycoon-game. Started with a web app, now working on an iOS mobile app.],
   ),
   techTags: ("NextJS", "React Native", "Expo", "iOS", "AWS RDS", "BaaS - AppWrite | Convex", "NativeWind"),
   oneline: true
