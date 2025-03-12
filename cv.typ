@@ -294,7 +294,7 @@
 )
 
 #cvEntry(
-  title: [Junior Systems Engineer],
+  title: [Junior Software Engineer],
   society: [Systematic],
   logo: image("img/systematic.png"),
   date: [2019 - 2020],
