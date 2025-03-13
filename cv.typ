@@ -32,6 +32,11 @@
   ))
 }
 
+#let makeLocationInfo() = {
+  place(dy: -3pt, dx: 0.9pt, box([#box(move(dy: 1.5pt, fa-location-dot(size: 13pt)))#h(0.9pt) Copenhagen]))
+  place(dy: 12pt, box([#box(move(dy: 1.5pt, fa-flag-usa(size: 13pt))) Open to US relocation]))
+}
+
 #let makeHeaderInfo() = {
   let iconsArgs = (size: 13pt)
   let personalInfoIcons = (
@@ -96,6 +101,7 @@
     stroke: none,
     row-gutter: (5mm, 4mm),
     [#headerNameStyle(firstName) #h(5pt) #headerNameStyle(lastName)],
+    // [#grid(columns: (auto, 109pt), gutter: 8pt, [#headerNameStyle(firstName) #h(5pt) #headerNameStyle(lastName)], align(top + left, headerInfoStyle(makeLocationInfo())))],
     [#headerQuoteStyle(headerQuote)],
     [#headerInfoStyle(makeHeaderInfo())],
 ))
@@ -277,7 +283,7 @@
   logo: image("img/carta.svg"),
   date: [2022 - Present],
   location: [Copenhagen, Denmark],
-  description: "I enabled a more efficient sales funnel and transparent management of billing for customers by revamping billing in a cross-functional teamwork, increased product demand by creating a tool for fundraising founders, delivered a high-impact feature despite hard deadline, provided affordable currency exchange rate solution for 200+ currencies, enhanced UX and DX of modal component and improved product reliability by automating link validation and adding data integrity checks. Presented upcoming features to both company-wide and small stakeholder groups, tailoring the presentation accordingly. Collaborated with and on solutions with designers and product managers.",
+  description: "I enabled better sales offerring and transparent management of billing for customers by revamping billing in a cross-functional teamwork, increased product demand by creating a tool for fundraising founders, delivered high-impact features despite tight deadlines, implemented in-app workflows increasing revenue for additional paid service by 300%, provided affordable currency exchange rate solution for 200+ currencies, enhanced UX and DX of modal component and improved product reliability by automating link validation and adding data integrity checks. Presented upcoming features to both company-wide and small stakeholder groups, tailoring the presentation accordingly. Collaborated with and on solutions with designers and product managers. Communicated clear and critical feedback in code reviews.",
   interpersonalTags: ("Cross-functional teamwork", "Ideation sessions", "Technical discussions", "Stakeholder demos", "Office hours"),
   techTags: ("HubSpot", "Stripe"),
 )
@@ -375,9 +381,4 @@
 #cvSkill(
   type: [Services],
   info: [Stripe #hBar() HubSpot #hBar() Heroku #hBar() Slack API #hBar() Netlify #hBar() PlanetScale #hBar() Turso],
-)
-
-#cvSkill(
-  type: [Personal interests],
-  info: [Piano #h(1.5pt) #box(baseline: 17%, image(height: 9pt, "img/piano.png")) #hBar() Music ◢◤ #hBar() Reading #hBar() Tech #hBar() Fitness #hBar() Wearing hoodies],
 )
